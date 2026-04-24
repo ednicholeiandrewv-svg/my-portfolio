@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#FFC0CB' } } }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+<div class="bg-gray-800 p-8 rounded-xl shadow-2xl w-full max-w-md border border-primary/30">
+    <h2 class="text-4xl font-bold text-center mb-6 text-primary">LOGIN</h2>
+    
+    <div id="message" class="mb-4 text-center hidden"></div>
+
+    <form id="loginForm">
+        <div class="mb-4">
+            <label class="block mb-2 text-white">Username</label>
+            <input type="text" id="username" class="w-full p-3 rounded bg-gray-700 border border-gray-600 text-white" required>
+        </div>
+        
+        <div class="mb-6">
+            <label class="block mb-2 text-white">Password</label>
+            <input type="password" id="password" class="w-full p-3 rounded bg-gray-700 border border-gray-600 text-white" required>
+        </div>
+        
+        <button type="submit" class="w-full bg-primary hover:bg-pink-500 text-black font-bold py-3 rounded">
+            SIGN IN
+        </button>
+    </form>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    const msg = document.getElementById('message');
+
+    if(user === "ed15@gmail.com" && pass === "edna15") {
+        msg.className = "text-green-500 block";
+        msg.innerHTML = "✅ Login Success! Redirecting...";
+        setTimeout(() => window.location.href = "portfolio_.html", 1000);
+    } else {
+        msg.className = "text-red-500 block";
+        msg.innerHTML = "❌ Invalid Username or Password!";
+        msg.classList.remove('hidden');
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "personal_info": {
+    "name": "Ed Nicholei Andrew Viloria",
+    "course": "BSIT - 3rd Year",
+    "age": 20
+  },
+  "skills_list": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Java",
+    "Python",
+    "C#",
+    "C++",
+    "Networking"
+  ],
+  "projects": [
+    {
+      "name": "Portfolio Website",
+      "status": "Completed",
+      "term": "Midterm"
+    },
+    {
+      "name": "System Development",
+      "status": "Ongoing",
+      "term": "Finals"
+    }
+  ]
+}
